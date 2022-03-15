@@ -56,6 +56,7 @@ ChatBot::ChatBot(const ChatBot &source) // 2 : copy constructor
 
     // shallow copy
     _image = source._image;
+    _currentNode = source._currentNode;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
         
@@ -74,6 +75,7 @@ ChatBot& ChatBot::operator=(const ChatBot &source) // 3 : copy assignment operat
 
     // shallow copy
     _image = source._image;
+    _currentNode = source._currentNode;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
     return *this;
@@ -90,6 +92,7 @@ ChatBot::ChatBot(ChatBot &&source) // 4 : move constructor
 
     // shallow copy
     _image = source._image;
+    _currentNode = source._currentNode;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
 
@@ -97,6 +100,7 @@ ChatBot::ChatBot(ChatBot &&source) // 4 : move constructor
     source._image=NULL;
     source._chatLogic=nullptr;
     source._rootNode=nullptr;
+    source._currentNode=nullptr;
 }
 
 ChatBot &ChatBot::operator=(ChatBot &&source) // 5 : move assignment operator
@@ -113,6 +117,7 @@ ChatBot &ChatBot::operator=(ChatBot &&source) // 5 : move assignment operator
 
     // shallow copy
     _image = source._image;
+    _currentNode = source._currentNode;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
 
@@ -120,6 +125,7 @@ ChatBot &ChatBot::operator=(ChatBot &&source) // 5 : move assignment operator
     source._image=NULL;
     source._chatLogic=nullptr;
     source._rootNode=nullptr;
+    source._currentNode=nullptr;
 
     return *this;
 }
