@@ -17,7 +17,6 @@ private:
     //// STUDENT CODE
     ////
 
-    //ChatLogic *_chatLogic;
     std::shared_ptr<ChatLogic> _chatLogic;
 
     ////
